@@ -88,14 +88,15 @@
 | Feature | BestHurtCam  | BetterHurtCam | HurtAnimationRemover |
 | -------- | -------- | ------------------- | ------------------- |
 | Option to cancel camera rotation when hurt | Yes<br><sub>(via "0" config value)</sub> | Yes<br><sub>(via "0" config value)</sub> | Yes<br><sub>(by default)</sub> |
-| Flexible config values beyond entirely cancelling the camera rotation when hurt | Yes<br><sub>(-100 to 100, inclusive)</sub> | Yes<br><sub>(0 to 100, inclusive)</sub> | No |
+| Flexible config values beyond entirely cancelling the camera rotation when hurt | Yes<br><sub>(-360 to 360, inclusive)</sub> | Yes<br><sub>(0 to 100, inclusive)</sub> | No |
 | Distinct config values based on player conditions | Yes | Yes | No |
 | Anti-rotation abuse to comply with Hypixel's mods guidelines | Yes | Yes | No |
-| Camera rotation options for while in water | Yes | No | No |
-| Camera rotation options per damage source | Yes | No | No |
-| Mildly more control over rotation intensity | Yes | No | No |
-| Camera rotates to left (via negative rotation intensity) | Yes | No | No |
+| Camera rotation options for while in water | Yes | No | N/A |
+| Camera rotation options per damage source | Yes | No | N/A |
+| Mildly more control over rotation intensity | Yes | No<br><sub>(Essential's sliders do be finicky)</sub> | N/A |
+| Camera rotates to left | Yes<br><sub>(via negative rotation intensities)</sub> | No | No |
 | Earthquake mode (jittery camera shake) | Yes | No | No |
+| Minecraft version support | 1.8.9 | 1.8.9, 1.18.x | 1.16.4 |
 
 
 ## Credits
