@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "besthurtcam",
+    "name": "BestHurtCam",
+    "description": "This mod allows the player to adjust the hurt animation upon being hit in Minecraft.",
+    "version": "1.0",
+    "mcversion": "1.8.9",
+    "url": "https://github.com/RayDeeUx/BestHurtCam",
+    "updateUrl": "",
+    "authorList": ["Erymanthus"],
+    "credits": ["boomboompower", "Scherso"],
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
