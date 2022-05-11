@@ -118,6 +118,14 @@
   
   > Credits to [Scherso](https://github.com/Scherso) for the BetterHurtCam mod, which added slightly more options to customize the hurt effect without violating Hypixel's guidelines.
   > You can find Scherso's BetterHurtCam mod [here](https://github.com/Scherso/BetterHurtCam).
+
+<a href="https://github.com/EssentialGG">
+  <img align="right" width="60"
+       src="https://avatars.githubusercontent.com/u/103071002"
+  />
+</a>
   
+  > Credits to the folks over at the [Essential](https://github.com/EssentialGG) organization for making Minecraft modding an easier experience for both users and developers.
+  > You can check out Essential [here](https://essential.gg).
 
 [forge]: https://files.minecraftforge.net/net/minecraftforge/forge/index_1.8.9.html
