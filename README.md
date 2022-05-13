@@ -93,6 +93,7 @@
 | Anti-rotation abuse to comply with Hypixel's mods guidelines | No<br><sub>(by dev's choice)</sub> | No<br><sub>(by dev's choice)</sub> | No<br><sub>(by default)</sub> |
 | Camera rotation options for while in water | Yes | No | N/A |
 | Camera rotation options per damage source | Yes | No | N/A |
+| Camera rotation multipliers per player condition | Yes | No | N/A |
 | Mildly more control over rotation intensity | Yes | No<br><sub>(Essential's sliders do be finicky)</sub> | N/A |
 | Camera rotates to left | Yes<br><sub>(via negative rotation intensities)</sub> | No | No |
 | Earthquake mode (jittery camera shake) | Yes | No | No |
