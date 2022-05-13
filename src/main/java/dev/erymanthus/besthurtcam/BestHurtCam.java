@@ -3,9 +3,7 @@ package dev.erymanthus.besthurtcam;
 import cc.woverflow.onecore.utils.Updater;
 import dev.erymanthus.besthurtcam.command.BestHurtCamCommand;
 import dev.erymanthus.besthurtcam.config.BestHurtCamConfig;
-import dev.erymanthus.besthurtcam.utils.HypixelUtils;
 import net.minecraft.client.Minecraft;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -29,6 +27,5 @@ public class BestHurtCam {
         new BestHurtCamCommand().register();
         config = new BestHurtCamConfig();
         config.preload();
-        MinecraftForge.EVENT_BUS.register(new HypixelUtils());
     }
 }

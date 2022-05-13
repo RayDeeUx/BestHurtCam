@@ -17,13 +17,14 @@ public class BestHurtCamConfig extends Vigilant {
 
     @Property(
         type = PropertyType.BUTTON,
-        name = "Camera Rotation Mode Info",
+        name = "Adjust Camera Rotation Mode Info",
         description =   "Camera rotation modes are as follows:\n\n" +
                         "Default: Standard Minecraft camera rotation (to the right). [Negative values will be treated as positive values in this mode.]\n\n" +
                         "Left or Right: Allows rotations to either left or right (depending on your config values).\n\n" +
                         "Earthquake: Fully randomizes camera rotation directions.\n\n\n" +
-                        "Pro tip: Use the LSHIFT key while clicking the arrows to change config values in increments of 5! Also the button, doesn't do anything.",
-        category = "Config",
+                        "Pro tip: Use the LSHIFT key while clicking the arrows to change config values in increments of 5! Also the button, doesn't do anything.\n\n" +
+                        "To replicate the vanilla Minecraft experience, the default config value is 14 for all camera rotation configs.",
+        category = "Config", subcategory = "ATTENTION: Damage Types",
         placeholder = "."
     )
     public static void fillerFunctionOne() {
@@ -32,7 +33,7 @@ public class BestHurtCamConfig extends Vigilant {
 
     @Property(
             type = PropertyType.NUMBER, name = "Adjust Hurt Camera Effect",
-            description = "Adjust Minecraft's hurt animation from all damage sources besides lava, fire, and water.\n\nThis will automatically be limited to 6 (or -6 depending on your config settings) on non-Skyblock Hypixel gamemodes.\n\nTo replicate the vanilla Minecraft experience, the default value is 14.",
+            description = "Adjust Minecraft's hurt animation from all damage sources besides lava, fire, and water.",
             category = "Config", subcategory = "Damage Types",
             min = -360, max = 360
     )
@@ -49,7 +50,7 @@ public class BestHurtCamConfig extends Vigilant {
     @Property(
             type = PropertyType.NUMBER,
             name = "Adjust Hurt Camera Effect in Lava",
-            description = "Adjust Minecraft's hurt animation while in lava.\n\nThis will automatically be limited to 6 (or -6 depending on your config settings) on non-Skyblock Hypixel gamemodes.\n\nTo replicate the vanilla Minecraft experience, the default value is 14.",
+            description = "Adjust Minecraft's hurt animation while in lava.",
             category = "Config", subcategory = "Damage Types",
             min = -360, max = 360
     )
@@ -66,7 +67,7 @@ public class BestHurtCamConfig extends Vigilant {
     @Property(
             type = PropertyType.NUMBER,
             name = "Adjust Hurt Camera Effect in Water",
-            description = "Adjust Minecraft's hurt animation while in water.\n\nThis will automatically be limited to 6 (or -6 depending on your config settings) on non-Skyblock Hypixel gamemodes.\n\nTo replicate the vanilla Minecraft experience, the default value is 14.",
+            description = "Adjust Minecraft's hurt animation while in water.",
             category = "Config", subcategory = "Damage Types",
             min = -360, max = 360
     )
@@ -83,19 +84,133 @@ public class BestHurtCamConfig extends Vigilant {
     @Property(
             type = PropertyType.NUMBER,
             name = "Adjust Hurt Camera Effect While Burning",
-            description = "Adjust Minecraft's hurt animation while burning.\n\nThis will automatically be limited to 6 (or -6 depending on your config settings) on non-Skyblock Hypixel gamemodes.\n\nTo replicate the vanilla Minecraft experience, the default value is 14.",
+            description = "Adjust Minecraft's hurt animation while burning.",
             category = "Config", subcategory = "Damage Types",
             min = -360, max = 360
     )
     public static int adjustHurtCamIfBurning = 14;
 
     @Property(
-            type = PropertyType.SELECTOR, name = "Burn Camera Rotation Mode",
+            type = PropertyType.SELECTOR, name = "Burning Camera Rotation Mode",
             description = "Choose your desired camera rotation mode while burning. Go back to the top for more info.",
             category = "Config", subcategory = "Damage Types",
             options = {"Default", "Left or Right", "Earthquake"}
     )
     public static int burnCamRotation = 0;
+
+    @Property(
+        type = PropertyType.BUTTON,
+        name = "Adjust Camera Multiplier Info",
+        description =   "Camera multipliers are based on player conditions.\n\n" +
+                        "With that said, not all of these multipliers may work as intended-those have a \"[!!!]\" suffix in their config name.\n\n" +
+                        "Additionally, all multipliers can stack. Things can and WILL get chaotic if you mess around too much.\n" +
+                        "As such, there is a toggle switch just below this setting in case of an emergency.\n\n" +
+                        "Please be sure of what you're doing if you enable that switch.\n\n" +
+                        "To replicate the vanilla Minecraft experience, the default config value is 1 for all camera multipliers.",
+        category = "Config", subcategory = "READ THIS: Rotation Multipliers",
+        placeholder = "."
+    )
+    public static void fillerFunctionTwo() {
+        return;
+    }
+
+    @Property(
+            type = PropertyType.SWITCH,
+            name = "Toggle Hurt Camera Multipliers",
+            description = "Adjust Minecraft's hurt animation multipliers.\n\nGenerally it's safer to leave this off, but you can enable this for full customizability of the hurt camera animation. Otherwise, leave this off.",
+            category = "Config", subcategory = "Rotation Multipliers"
+    )
+    public static boolean toggleMultipliers = false;
+
+    @Property(
+            type = PropertyType.NUMBER,
+            name = "Adjust Hurt Camera Multiplier While Sneaking",
+            description = "Adjust Minecraft's hurt animation multiplier when you're sneaking.\n\nTo replicate the vanilla Minecraft experience, the default value is 1.",
+            category = "Config", subcategory = "Rotation Multipliers",
+            min = -10, max = 10
+    )
+    public static int hurtCamSneakMultiplier = 1;
+
+    @Property(
+            type = PropertyType.NUMBER,
+            name = "Adjust Hurt Camera Multiplier While Sprinting",
+            description = "Adjust Minecraft's hurt animation multiplier when you're sprinting.\n\nTo replicate the vanilla Minecraft experience, the default value is 1.",
+            category = "Config", subcategory = "Rotation Multipliers",
+            min = -10, max = 10
+    )
+    public static int hurtCamSprintingMultiplier = 1;
+
+    @Property(
+            type = PropertyType.NUMBER,
+            name = "Adjust Hurt Camera Multiplier While Blocking/Aiming",
+            description = "Adjust Minecraft's hurt animation multiplier when you're blocking with a sword or aiming with a bow.\n\nTo replicate the vanilla Minecraft experience, the default value is 1.",
+            category = "Config", subcategory = "Rotation Multipliers",
+            min = -10, max = 10
+    )
+    public static int hurtCamBlockingMultiplier = 1;
+    
+    @Property(
+            type = PropertyType.NUMBER,
+            name = "Adjust Hurt Camera Multiplier While Eating",
+            description = "Adjust Minecraft's hurt animation multiplier when you're eating.\n\nTo replicate the vanilla Minecraft experience, the default value is 1.",
+            category = "Config", subcategory = "Rotation Multipliers",
+            min = -10, max = 10
+    )
+    public static int hurtCamEatingMultiplier = 1;
+
+    @Property(
+            type = PropertyType.NUMBER,
+            name = "Adjust Hurt Camera Multiplier While Riding a Horse",
+            description = "Adjust Minecraft's hurt animation multiplier when you're riding a horse.\n\nTo replicate the vanilla Minecraft experience, the default value is 1.",
+            category = "Config", subcategory = "Rotation Multipliers",
+            min = -10, max = 10
+    )
+    public static int hurtCamRidingHorseMultiplier = 1;
+
+    @Property(
+            type = PropertyType.NUMBER,
+            name = "Adjust Hurt Camera Multiplier While Riding Anything Else",
+            description = "Adjust Minecraft's hurt animation multiplier when you're riding anything besides a horse (ie minecarts or boats).\n\nTo replicate the vanilla Minecraft experience, the default value is 1.",
+            category = "Config", subcategory = "Rotation Multipliers",
+            min = -10, max = 10
+    )
+    public static int hurtCamRidingMultiplier = 1;
+
+    @Property(
+            type = PropertyType.NUMBER,
+            name = "Adjust Hurt Camera Multiplier While Pushed by Water",
+            description = "Adjust Minecraft's hurt animation multiplier when you're being pushed by water.\n\nTo replicate the vanilla Minecraft experience, the default value is 1.",
+            category = "Config", subcategory = "Rotation Multipliers",
+            min = -10, max = 10
+    )
+    public static int hurtCamPushedWaterMultiplier = 1;
+    
+    @Property(
+            type = PropertyType.NUMBER,
+            name = "Adjust Hurt Camera Multiplier While Wet",
+            description = "Adjust Minecraft's hurt animation multiplier when you're wet (ie when it's raining outside).\n\nTo replicate the vanilla Minecraft experience, the default value is 1.",
+            category = "Config", subcategory = "Rotation Multipliers",
+            min = -10, max = 10
+    )
+    public static int hurtCamWetMultiplier = 1;
+
+    @Property(
+            type = PropertyType.NUMBER,
+            name = "Adjust Hurt Camera Multiplier While Climbing a Ladder",
+            description = "Adjust Minecraft's hurt animation multiplier when you're climbing a ladder.\n\nTo replicate the vanilla Minecraft experience, the default value is 1.",
+            category = "Config", subcategory = "Rotation Multipliers",
+            min = -10, max = 10
+    )
+    public static int hurtCamClimbingLadderMultiplier = 1;
+
+    @Property(
+            type = PropertyType.NUMBER,
+            name = "Adjust Hurt Camera Multiplier While Self is Invisible",
+            description = "Adjust Minecraft's hurt animation multiplier when you're invisible.\n\nTo replicate the vanilla Minecraft experience, the default value is 1.",
+            category = "Config", subcategory = "Rotation Multipliers",
+            min = -10, max = 10
+    )
+    public static int hurtCamInvisMultiplier = 1;
 
     @Property(
         type = PropertyType.BUTTON,
@@ -108,7 +223,7 @@ public class BestHurtCamConfig extends Vigilant {
         category = "Extra Info",
         placeholder = "."
     )
-    public static void fillerFunctionTwo() {
+    public static void fillerFunctionThree() {
         return;
     }
 

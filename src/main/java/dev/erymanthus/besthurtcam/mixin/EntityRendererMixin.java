@@ -1,7 +1,6 @@
 package dev.erymanthus.besthurtcam.mixin;
 
 import dev.erymanthus.besthurtcam.config.BestHurtCamConfig;
-import dev.erymanthus.besthurtcam.utils.HypixelUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.EntityRenderer;
 
@@ -20,6 +19,7 @@ public class EntityRendererMixin {
     (method = "hurtCameraEffect", constant = @Constant(floatValue = 14f))
     private float multiplyShake(float original) {
         float shake = getShake();
+        float shakeMultiplier = getShakeMultiplier();
         int rotationMode = getRotationMode();
         if (shake < 0 && rotationMode == 0) {
             shake = Math.abs(shake);
@@ -27,13 +27,7 @@ public class EntityRendererMixin {
             int randomNum = ((int)(Math.random() * 2)) + 1; //random value between 1 or 2
             if (randomNum == 1) shake *= -1;
         }
-        if (HypixelUtils.inHypixel && !HypixelUtils.inSkyblock) {
-            if (shake < 6) shake = 6;
-            if (shake > -6) shake = -6;
-            if (shake > 100) shake = 100;
-            if (shake < -100) shake = -100;
-        }
-        return shake;
+        return shake * shakeMultiplier;
     }
 
     private int getRotationMode() {
@@ -54,9 +48,38 @@ public class EntityRendererMixin {
             return (float)BestHurtCamConfig.adjustHurtCamInWater;
         } if (mc.thePlayer.isBurning()) {
             return (float)BestHurtCamConfig.adjustHurtCamIfBurning;
+        } if (mc.thePlayer.isBurning()) {
+            return (float)BestHurtCamConfig.adjustHurtCamIfBurning;
         } else {
             return (float)BestHurtCamConfig.adjustHurtCam;
         }
+    }
+    private float getShakeMultiplier() {
+        float result = 1;
+        if (BestHurtCamConfig.toggleMultipliers) {
+            if (mc.thePlayer.isSneaking()) {
+                result *= (float)BestHurtCamConfig.hurtCamSneakMultiplier;
+            } if (mc.thePlayer.isSprinting()) {
+                result *= (float)BestHurtCamConfig.hurtCamSprintingMultiplier;
+            } if (mc.thePlayer.isPushedByWater()) {
+                result *= (float)BestHurtCamConfig.hurtCamPushedWaterMultiplier;
+            } if (mc.thePlayer.isBlocking()) {
+                result *= (float)BestHurtCamConfig.hurtCamBlockingMultiplier;
+            } if (mc.thePlayer.isEating()) {
+                result *= (float)BestHurtCamConfig.hurtCamEatingMultiplier;
+            } if (mc.thePlayer.isOnLadder()) {
+                result *= (float)BestHurtCamConfig.hurtCamClimbingLadderMultiplier;
+            } if (mc.thePlayer.isInvisible()) {
+                result *= (float)BestHurtCamConfig.hurtCamInvisMultiplier;
+            } if (mc.thePlayer.isWet()) {
+                result *= (float)BestHurtCamConfig.hurtCamWetMultiplier;
+            } if (mc.thePlayer.isRidingHorse()) {
+                result *= (float)BestHurtCamConfig.hurtCamRidingHorseMultiplier;
+            } if (mc.thePlayer.isRiding() && !mc.thePlayer.isRidingHorse()) {
+                result *= (float)BestHurtCamConfig.hurtCamRidingMultiplier;
+            }
+        }
+        return result;
     }
 
 }
