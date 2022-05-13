@@ -90,7 +90,7 @@
 | Option to cancel camera rotation when hurt | Yes<br><sub>(via "0" config value)</sub> | Yes<br><sub>(via "0" config value)</sub> | Yes<br><sub>(by default)</sub> |
 | Flexible config values beyond entirely cancelling the camera rotation when hurt | Yes<br><sub>(-360 to 360, inclusive)</sub> | Yes<br><sub>(0 to 100, inclusive)</sub> | No |
 | Distinct config values based on player conditions | Yes | Yes | No |
-| Anti-rotation abuse to comply with Hypixel's mods guidelines | Yes | Yes | No |
+| Anti-rotation abuse to comply with Hypixel's mods guidelines | No<br><sub>(by dev's choice)</sub> | No<br><sub>(by dev's choice)</sub> | No<br><sub>(by default)</sub> |
 | Camera rotation options for while in water | Yes | No | N/A |
 | Camera rotation options per damage source | Yes | No | N/A |
 | Mildly more control over rotation intensity | Yes | No<br><sub>(Essential's sliders do be finicky)</sub> | N/A |
