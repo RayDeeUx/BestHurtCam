@@ -117,7 +117,7 @@
   />
 </a>
   
-  > Credits to [Scherso](https://github.com/Scherso) for the BetterHurtCam mod, which added slightly more options to customize the hurt effect without violating Hypixel's guidelines.
+  > Credits to [Scherso](https://github.com/Scherso) for the BetterHurtCam mod, which added slightly more options to customize the hurt effect.
   > You can find Scherso's BetterHurtCam mod [here](https://github.com/Scherso/BetterHurtCam).
 
 <a href="https://github.com/EssentialGG">
