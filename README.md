@@ -13,6 +13,8 @@
 3. **Build this repository**
 4. **Place the resulting file in your `minecraft/mods` directory**
 
+## Build Guides
+
 <details>
   <summary>For those who would like to build themselves (the original guide Scherso included for BetterHurtCam)</summary>
   
