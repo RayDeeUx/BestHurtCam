@@ -78,7 +78,7 @@
   - Additionally, make sure your macOS Terminal is set to running on the `bash` shell and not the `zsh` shell.
 
   1. Open the macOS Terminal, `brew install git` or `brew upgrade git` if necessary.
-  2. ```bash git clone https://github.com/RayDeeUx/BestHurtCam/ && cd BestHurtCam/ && chmod 755 ./gradlew && ./gradlew build```
+  2. ```git clone https://github.com/RayDeeUx/BestHurtCam/ && cd BestHurtCam/ && chmod 755 ./gradlew && ./gradlew build```
   3. Check `BestHurtCam/build/libs` for the resulting `.jar` file.
 
   [jdk8]: https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html
