@@ -2,7 +2,7 @@
   BestHurtCam by RayDeeUx
 </h2>
 
-  A <i>direct modification</i> of [Scherso](https://github.com/Scherso)'s [BetterHurtCam](https://github.com/Scherso/BetterHurtCam) mod, which allows you to adjust Minecraft's hurt animation based on damage sources and player conditions, by selecting a number. Scherso's BetterHurtCam mod was originally inspired by [boomboompower](https://github.com/boomboompower)'s [HurtAnimationRemover](https://github.com/boomboompower/HurtAnimationRemover) mod, which cancels Minecraft's hurt animation regardless of the damage source/player conditions. Licensed under [the GNU-GPL v3 license](https://www.gnu.org/licenses/gpl-3.0.txt) as per the terms of section 5. Development originally began in mid-February 2022, halted almost immediately after due to personal circumstances, and finally finished on mid-May 2022.
+  A <i>direct modification</i> of [Scherso](https://github.com/Scherso)'s [BetterHurtCam](https://github.com/Scherso/BetterHurtCam) mod, which allows you to adjust Minecraft's hurt animation based on damage sources and player conditions, by selecting a number. Scherso's BetterHurtCam mod was originally inspired by [boomboompower](https://github.com/boomboompower)'s [HurtAnimationRemover](https://github.com/boomboompower/HurtAnimationRemover) mod, which cancels Minecraft's hurt animation regardless of the damage source/player conditions. Licensed under [the GNU-GPL v3 license](https://www.gnu.org/licenses/gpl-3.0.txt) as per the terms of section 5. Development of BestHurtCam originally began in mid-February 2022, halted almost immediately after due to personal circumstances, and finally finished on mid May 2022.
 
   <b><i>Disclaimer: BestHurtCam only supports Minecraft Forge 1.8.9, unlike its ancestor BetterHurtCam by Scherso, which supports multiple versions of Minecraft.</i></b>
 
@@ -14,7 +14,7 @@
 4. **Place the resulting file in your `minecraft/mods` directory**
 
 <details>
-  <summary>For those who would like to build themselves</summary>
+  <summary>For those who would like to build themselves (the original guide Scherso included for BetterHurtCam)</summary>
   
   ## Build with [Gradle][gradle] using [Arch Loom][archloom]
 
